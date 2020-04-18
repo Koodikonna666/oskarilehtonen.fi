@@ -76,20 +76,50 @@
   border: 2px solid rgb(255,0,0);
 }
 
+@media (prefers-color-scheme: dark) {
+  .bullet-red {
+    border: 2px solid rgb(255,0,0);
+  }
+}
+
 .bullet-green {
   border: 2px solid rgb(0,255,0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .bullet-green {
+    border: 2px solid rgb(0,255,0);
+  }
 }
 
 .bullet-yellow {
   border: 2px solid rgb(250,255,0);
 }
 
+@media (prefers-color-scheme: dark) {
+  .bullet-yellow {
+    border: 2px solid rgb(250,255,0);
+  }
+}
+
 .bullet-black {
   border: 2px solid rgb(0,0,0);
 }
 
+@media (prefers-color-scheme: dark) {
+  .bullet-black {
+    border: 2px solid rgb(0,0,0);
+  }
+}
+
 .bullet-purple {
   border: 2px solid rgb(97,0,255);
+}
+
+@media (prefers-color-scheme: dark) {
+  .bullet-purple {
+    border: 2px solid rgb(97,0,255);
+  }
 }
 
 .date {
