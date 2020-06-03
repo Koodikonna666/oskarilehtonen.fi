@@ -1,0 +1,24 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>Laske luvut yhteen</h1>
+
+        <form id="f">
+            <input type=text id="n1"><br>
+            <input type=text id="n2"><br>
+            <button type="button" onclick="tulostaSumma(f.n1.value, f.n2.value)">Laske</button>
+         </form>
+         <div id="result">Vastaus on: </div>
+    </body>
+    <script>
+       function tulostaSumma(n1, n2){
+            let results = "Vastaus on: " + (parseInt(n1) + parseInt(n2))
+            document.getElementById("result").innerHTML = results;
+            return results
+        }
+    </script>
+</html>
