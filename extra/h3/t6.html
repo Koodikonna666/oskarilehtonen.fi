@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+        <label>Valitse juhlaväri?</label><br>
+        <select id="varikoodivalinta" oninput="liveColor()">
+            <option value="#FFFFFF">Valkoinen</option>
+            <option value="#FF0000">Punainen</option>
+            <option value="#FFFF00">Keltainen</option>
+            <option value="#008000">Vihreä</option>
+        </select><br><br>
+        <label>Mikä juhla?</label><br>
+        <input type="text" id="input" oninput="live()"><br><br>
+        <button onclick="changeColor()">Vaihda valittu taustaväri</button>
+        <div id="tulostusalue" style="border: 2px solid black; padding: 25px;">
+            <h2>Tulostusalue</h2>
+            <span id="varikoodi">Väri: #FFFFFF</span><br><br>
+            <span id="juhla"></span>
+        </div>
+</body>
+    <script>
+        function live() {
+            var x = document.getElementById("input").value;
+            document.getElementById("juhla").innerHTML = x;
+        }
+        function liveColor() {
+            var x = document.getElementById("varikoodivalinta").value;
+            document.getElementById("varikoodi").innerHTML = "Väri: " + x;
+        }
+        function changeColor(){
+            var x = document.getElementById("tulostusalue");
+            x.style.backgroundColor = document.getElementById("varikoodivalinta").value;
+        }
+
+
+    </script>
+</html>

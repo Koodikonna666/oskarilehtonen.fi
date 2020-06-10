@@ -1,0 +1,33 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+      <h1>Simple todo list</h1>
+
+      <label>Todo</label>
+      <input type="text" name="todo" id="todo"><br><br>
+     
+      <button id="button1">Lisää</button>
+      <button id="button2">Tyhjennä</button>
+
+      <ul id="todolist">
+          
+      </ul>
+    </body>
+    <script>
+        button1.onclick = function() {
+            let ulnode = document.getElementById("todolist");
+            let linode = document.createElement('li');
+            let litext = document.getElementById("todo").value;
+            linode.append(litext);
+            ulnode.appendChild(linode);
+        }
+        button2.onclick = function() {
+            document.getElementById("todolist").innerHTML = "";
+        }
+        
+        
+    </script>
+</html>
