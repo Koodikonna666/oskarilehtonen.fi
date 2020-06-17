@@ -1,6 +1,7 @@
 {
   "name": "My extension",
   "permissions": [
-    "https://*/"
+    "https://*/",
+    "C:*"
   ]
 }

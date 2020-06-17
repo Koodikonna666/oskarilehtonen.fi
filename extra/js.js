@@ -8,9 +8,9 @@ function loadJSON() {
 		// create a json object
 		var JSONObject = JSON.parse(response);
 		talot = JSONObject.talot;
-		//console.log(talot);
+		//console.log(talot.lenght);
 		for (var i=0;i<talot.length;i++) {
-			naytaTalo(i);	
+			naytaTalo(i);
 		}
 	});
 }
@@ -32,6 +32,7 @@ function ajax(url, fn) {
 }
 
 function naytaTalo(index) {
+	console.log("hello")
 	// uusi div	
 	var taloDiv = document.createElement("div");
 	taloDiv.setAttribute("class","taloContainer");
