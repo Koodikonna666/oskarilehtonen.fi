@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="../styles/styles.css"></link>
+</head>
+<body>
+<div id="container">
+<h1> Todo list</h1>
+
+<form id="todo-form" class="">
+    <label for="todo">To do:</label>
+    <input type="text" id="new-todo-item" name="todo" />
+    <input type="submit" id="add-todo-item" value="add the todo" />
+  </form>
+
+<ul id="todo-list"></ul>
+</div>
+<script>
+ $("#add-todo-item").click(function() {
+     var newTask = $("#new-todo-item").val();
+     if(newTask !== ""){
+        var count = $("#todo-list").children().length;
+        $('#todo-list').append('<li class="list-group-item deletetask bg-success">' + count + '. '+ newTask + '</li>');
+        $('#new-todo-item').val('');
+
+     }
+ })
+
+  
+</script>
+  
+</body>
+</html>
