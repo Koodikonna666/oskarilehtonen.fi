@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+</head>
+<body onload="drawChart()">
+
+    <button onclick="addCar(0)">Ford</button>
+    <button onclick="addCar(1)" >Opel</button>
+    <button onclick="addCar(2)">Toyota</button>
+    <button onclick="nollaa()">Nollaa</button>
+
+<div style="width: 600px;">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+
+    var amount = [2,1,4]
+    var chart;
+
+    function drawChart(){
+        var ctx = document.getElementById('myChart').getContext('2d');
+        chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Ford', 'Opel', 'Toyota'],
+            datasets: [{
+                label: 'Lukumäärä (kpl)',
+                backgroundColor: 'rgb(255, 99, 132)',
+                backgroundColor: ["red", "blue", "green"], 
+                data: amount
+            }]
+        }
+    });
+    }
+    function addCar(carnumber){
+        chart.destroy();
+        amount[carnumber] += 1; 
+        drawChart();
+
+    }
+
+    function nollaa(){
+        chart.destroy();
+        amount = [0,0,0];
+        drawChart();
+    }
+
+    Chart.scaleService.updateScaleDefaults('linear', {
+        ticks: {
+            min: 0
+        }
+    });
+
+</script>
+</body>
+</html>
