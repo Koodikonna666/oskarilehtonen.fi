@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+        <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+        <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+
+    <style>
+	 body {width: 400px; margin: auto; background-color: #adbed8}
+	
+    img{width: 200px; margin: 20px;}
+	
+    </style>
+  </head>
+
+  <body>
+ 
+  <div id="ratkaisu" class="box"></div>
+
+    <script type="text/babel">
+
+
+ class Kotilaskuri extends React.Component {
+
+    constructor(props){
+            super(props);
+                this.state = {
+                    cliks: [0,0],
+                }
+                this.onImageClicked = this.onImageClicked.bind(this);
+        }
+      
+onImageClicked(index){
+        const cliks = this.state.cliks
+        for (var i = 0; i < cliks.length; i++) {
+            if (index === 0){
+                console.log("hello")
+                this.setState({cliks:[cliks[0]+1,cliks[1]]})
+            }else if(index == 1){
+                this.setState({cliks:[cliks[0],cliks[1]+1]})
+            }
+        }
+
+}
+
+	render() {
+	    return (
+	    <div>
+            <h1>Kotilaskuri</h1>
+            <p>Klikkaa mieleistä kodin kuvaa</p>
+            <span>Kaupunkitalo: {this.state.cliks[0]}</span><br/>
+            <img src="../kuvat/talo1.jpg" onClick={this.onImageClicked.bind(this, 0)}/><br/>
+            <span>Maatalo: {this.state.cliks[1]}</span><br/>
+            <img src="../kuvat/talo5.jpg" onClick={this.onImageClicked.bind(this, 1)}/>
+	    </div>
+	    );
+	  }
+	}
+
+	ReactDOM.render(
+	  <Kotilaskuri />,
+	  document.getElementById('ratkaisu')
+	);
+
+    </script>
+
+  </body>
+</html>
+
