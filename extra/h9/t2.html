@@ -18,7 +18,6 @@
 
     <script type="text/babel">
 
-
 let highscoreData = [
             { id: 1, name: 'Jason', score: 4000 },
             { id: 2, name: 'Make', score: 3000 },
@@ -40,6 +39,7 @@ let highscoreData = [
         this.getHighscores();
     }
          getHighscores (index) {
+
         //  this.setState({highscores: highscoreData, loaded:false});
         // setTimeout(() => this.setState({highscores: highscoreData, loaded:true}), 3000);
             $.ajax({
@@ -47,10 +47,12 @@ let highscoreData = [
             cache: false,
             dataType: 'json'
         }).done((data) => {
-            this.setState({persons: data.persons, loaded:true});
+			console.log(data)
+            this.setState({highscores: data.highScoreData, loaded:true});
         }).fail((jqXHR, textStatus, errorThrown) => {
             console.log(textStatus+":"+errorThrown);
         });
+					console.log(this.state.highscores)
 	  }
       getPersons () {
     
