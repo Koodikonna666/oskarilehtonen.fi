@@ -288,8 +288,8 @@ body, html {
 
 @media (max-width: 575px) {
   .col-sm-6.col-md-4.item.tietoja-borders {
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    border-top: 2px dashed rgb(20,130,185);
+    border-bottom: 2px dashed rgb(20,130,185);
     margin-top: 50px;
     padding-bottom: 50px;
   }

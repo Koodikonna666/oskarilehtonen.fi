@@ -38,8 +38,17 @@
 
 .article-list .item {
   padding-top: 50px;
-  min-height: 425px;
   text-align: center;
+  background-color: initial;
+}
+
+@media (max-width: 574px) {
+  .article-list .blog-recent .item {
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+  }
 }
 
 .article-list .item .name {
