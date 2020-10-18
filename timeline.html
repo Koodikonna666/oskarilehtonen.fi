@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/blog.css">
     <link rel="stylesheet" href="assets/css/Bold-BS4-Animated-Back-To-Top.css">
     <link rel="stylesheet" href="assets/css/Brands.css">
+    <link rel="stylesheet" href="assets/css/checkbox.css">
     <link rel="stylesheet" href="assets/css/Features-Boxed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
@@ -56,24 +57,31 @@
         </div>
     </nav>
     <div data-bs-parallax-bg="true" id="timeline-parallax" style="background-image: url(assets/img/oskari_laituri.jpg);background-position: center;background-size: cover;height: 100vh;"></div>
-    <div id="timeline-guide">
+    <div style="background-color: white;padding-top: 100px;padding-bottom: 100px;">
         <div class="container">
             <div class="row" id="timeline-info">
-                <div class="col-md-6 timeline-info-col">
-                    <h2 class="text-center">Aikajana<span style="font-size: 50%;">(beta)</span></h2>
-                    <p class="text-justify">Aikajanalla pystyt katsomaan kisani, blogikirjoitukset, sekä terveyteen/elämääni liittyviä tapahtumia. Pystyt karsimaan viereisestä taulukosta haluamasi alueet pois. Kilpailuissa värikoodi kertoo oman fiilikseni kisasta. Otsikkoa klikkaamalla
-                        avautuu lisätietoa tapahtumasta.</p>
+                <div class="col-md-6 timeline-info">
+                    <div>
+                        <h2 class="text-center" style="padding: 10px;">Aikajana</h2>
+                        <p class="text-justify">Aikajanalla pystyt katsomaan kisani, blogikirjoitukset, sekä terveyteen ja elämääni liittyviä tapahtumia. Pystyt karsimaan viereisestä taulukosta haluamasi alueet pois. Kilpailuissa värikoodi kertoo oman fiilikseni kisasta. Otsikkoa
+                            klikkaamalla avautuu lisätietoa tapahtumasta.<br></p>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center timeline-info-col"><div class="timeline-select-grid"> 
-    <h2>Kategoriat</h2>
-        <div id="timeline-select">
+                <div class="col-md-6 timeline-info">
+                    <div><div class="timeline-select-grid"> 
+    <h2 class="text-center" style="padding:10px">Kategoriat</h2>
+    <div style="display:flex">
+        <div id="timeline-select" style="margin-right:auto; margin-left:auto">
             <ul>
-                <li><input type="checkbox" class="form-check-input" onchange="kilpailu(this.checked)" checked />Kilpailut<div class ="bullet bullet-green"></div><div style="margin-left:4px;" class ="bullet bullet-yellow"></div><div style="margin-left:4px;" class ="bullet bullet-red"></div></li>
-                <li><input type="checkbox" class="form-check-input" onchange="blogi(this.checked)" checked />Blogit<div class ="bullet bullet-purple"></div></li>
-                <li><input type="checkbox" class="form-check-input" onchange="terveys(this.checked)" checked />Terveys / elämä <div class ="bullet bullet-red"></div><div class ="bullet bullet-black"></div></li>
+                <li><input id="1" type="checkbox" class="css-checkbox" onchange="kilpailu(this.checked)" checked /><label for="1" class="css-label lite-blue-check">Kilpailut</label><div class ="bullet bullet-green"></div><div style="margin-left:4px;" class ="bullet bullet-yellow"></div><div style="margin-left:4px;" class ="bullet bullet-red"></div></li>
+                <li><input  id="2" type="checkbox" class="css-checkbox" onchange="blogi(this.checked)" checked /><label for="2" class="css-label lite-blue-check">Blogit</label><div class ="bullet bullet-purple"></div></li>
+                <li><input id="3"  type="checkbox" class="css-checkbox" onchange="terveys(this.checked)" checked /><label for="3" class="css-label lite-blue-check">Terveys / elämä</label><div class ="bullet bullet-red"></div><div class ="bullet bullet-black"></div></li>
             </ul>
         </div>
+    </div>
+
 </div></div>
+                </div>
             </div>
         </div>
     </div><!-- 26 modal used -->
@@ -82,6 +90,78 @@
 
 <div id="timeline">
     <ul>
+        
+        <li class="blogi">
+            <div class ="bullet bullet-purple"></div>
+            <div class ="date">1.10</div>
+            <div class ="timeline_info">
+                <a href="blog_tekstit/kausi_2020.html"
+class="w3-button">Kausi 2020</a>
+            </div>
+        </li>
+        
+        <li class="terveys">
+            <div class ="bullet bullet-black"></div>
+            <div class ="date">1.10</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id43').style.display='block'"
+class="w3-button">Valmentajan vaihto</a>
+                <p>Petteri Jouste</p>
+            </div>
+        </li>
+               <div id="id43" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id43').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Valmentajan vaihto</h4>
+      <p>Pitkän pohdinnan jälkeen päätin vaihtaa valmentajaa kauden 2020 jälkeen. Minulle tärkeää on se, että valmentaja pystyy olemaan harjoituksissa paikalla päivittäin jotta pystyy antamaan palautetta treeneistä päivittäin. Edellisen valmentajani Vesa Sjöstedtin kanssa tämä ei tietenkään pitkän väliatkan takia onnistunut. Koin myös tarvitsevani jotain uutta harjoituksiini, sillä olinhan ollut Vesan valmennuksessa jo vuodesta 2014 lähtien.</p>
+    </div>
+  </div>
+</div>
+        
+        <li class="kilpailu">
+            <div class ="bullet bullet-red"></div>
+            <div class ="date">16.8</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id42').style.display='block'"
+class="w3-button">Kalevan Kisat</a>
+                <p>200m ae: DNS</p>
+            </div>
+        </li>
+               <div id="id42" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id42').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Kalevan kisat</h4>
+      <p>Perjantaina ollut migreenikohtaus verotti energiaa lauantain palautumisesta. Energiat ei yksinkertaisesti riittänyt enään lauantai - sunnuntai välisen yön palautumiseen sadan mertin kilpailusta. Tein verryttelyn normaalisti, mutta vasta kentällä päätin, että en halua juosta. </p>
+    </div>
+  </div>
+</div>
+        
+        <li class="kilpailu">
+            <div class ="bullet bullet-green"></div>
+            <div class ="date">15.8</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id41').style.display='block'"
+class="w3-button">Kalevan Kisat</a>
+                <p>100m lk: 10.59</p>
+                <p>100m ae: 10.58</p>
+            </div>
+        </li>
+               <div id="id41" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id41').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Kalevan kisat</h4>
+      <p>Kalevan kisoissa vauhti alkoi pikkuhiljaa löytymään. Juoksu aloi tuntumaan siltä miltä sen pitäisikin. En ollut juossut sataa metriä kalevan kisoissa aikoihin, joten oli ihan kivakin juosta sekin välilä. Juoksu tuntui verryttelyissä todella hyvältä, ja sain myös molemmissa juoksuissa todella hyvät lähdöt, joten juoksua oli helppo jatkaa siitä. </p>
+    </div>
+  </div>
+</div>
+        
+     
         
         
         <li class="blogi">
