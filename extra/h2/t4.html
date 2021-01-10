@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+      <h1>Vauhtilaskin</h1>
+     <!-- <form id="f">-->
+            <label>Tunnit</label>
+            <input type="number" name="h" id="h"><br><br>
+            <label>Minuutit</label>
+            <input type="number" name="m" id="m"><br><br>
+            <label>Sekunnit</label>
+            <input type="number" name="s" id="s"><br><br>
+            <label>Kilometrit</label>
+            <input type="number" name="km" id="km"><br><br>
+
+            <button value="Laske" onclick="calculate()">Laske</button>
+      <!--   </form>-->
+    </body>
+    <script>
+        console.log("here")
+        
+        h = document.getElementById("h")
+        m = document.getElementById("m")
+        s = document.getElementById("s")
+        km = document.getElementById("km")
+        function calculate(h, m, s, km){
+
+            console.log("here2")
+
+        var tunnit = parseInt(h)+(parseInt(min)*60+parseInt(sec))/3600;
+        var kmh = kilometrit/tunnit;
+
+        var sekunnit = parseInt(h)*60*60+parseInt(min)*60+parseInt(sec);
+        sekunnitPerKm = sekunnit/km;
+        var minutes = 0;
+
+        sekunnit = Math.round(sekunnit);
+        sekunnit = String('0'+ sekunnit).slice(-2);
+
+        console.log(kmh)
+        console.log(minutes)
+       }
+        
+    </script>
+</html>

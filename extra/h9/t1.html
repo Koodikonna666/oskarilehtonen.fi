@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+        <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+        <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+
+   
+  </head>
+
+  <body>
+ 
+  <h3>Highscores</h3>
+  <div id="ratkaisu" class="box"></div>
+
+    <script type="text/babel">
+
+
+let highscoreData = [
+            { id: 1, name: 'Jason', score: 4000 },
+            { id: 2, name: 'Make', score: 3000 },
+            { id: 3, name: 'Bill', score: 2000 },
+            { id: 4, name: 'Liza', score: 1000 }
+        ];
+
+ class Nelilaskin extends React.Component {
+
+    constructor(props){
+            super(props);
+            this.state = {
+                highscores: [], 
+                loaded: false
+            };
+                this.getHighscores = this.getHighscores.bind(this);
+        }
+        componentDidMount () {   
+        this.getHighscores();
+    }
+         getHighscores (index) {
+            this.setState({highscores: highscoreData, loaded:false});
+            setTimeout(() => this.setState({highscores: highscoreData, loaded:true}), 3000);
+	  }
+
+	render() {
+        if(!this.state.loaded){
+            return(
+                <div>
+            <div id="scores"></div>
+            <ul>
+                <p>Loading...</p>
+            </ul>
+            <button onClick={this.getHighscores}>Lataa uudestaan</button>
+	      </div>            )
+        }else{
+        return (
+          <div>
+            <div id="scores"></div>
+            <ul>
+                {this.state.highscores.map(function(player, index){
+                    return <li key={ index }>{ player.name }: {player.score}</li>;
+                })
+                }
+            </ul>
+            <button onClick={this.getHighscores}>Lataa uudestaan</button>
+	      </div>
+	    );
+	  }
+	}
+ }
+	ReactDOM.render(
+	  <Nelilaskin />,
+	  document.getElementById('ratkaisu')
+	);
+
+    </script>
+
+  </body>
+</html>
+

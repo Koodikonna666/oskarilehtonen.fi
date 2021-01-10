@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+    <style type="text/css">
+        #map { height: 600px; width: 600px;} 
+     
+     .custom-popup .leaflet-popup-content-wrapper {
+       background:#ffc;
+       font-size:12px;
+       line-height:18px;
+       position: relative;
+       top: -30px
+       }
+     .custom-popup .leaflet-popup-content-wrapper a {
+       color:rgba(0,0,255,0.5);
+       }
+     .custom-popup .leaflet-popup-tip-container {
+       width:30px;
+       height:15px;
+       }
+     .custom-popup .leaflet-popup-tip {
+       border-left:15px solid transparent;
+       border-right:15px solid transparent;
+       border-top:15px solid #2c3e50;
+       }
+     
+     </style>
+     
+</head>
+<body>
+    <h3>Golfin kulta- ja etukentät</h3>
+    <div id="map"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+
+function initMap() {
+  var hki = {lat: 61.6030342, lng: 25.9327534};
+ 
+  var map = new google.maps.Map(document.getElementById('map'), {zoom: 7, center: hki});
+  
+ var icon;
+
+ $.ajax({
+           url: 'kentat.json'
+    }).fail(function() {
+            console.log("fail!");
+    }).done(function(data) {
+        // loop through all courses
+        $.each(data.kentat, function(index, kentta) {
+           // marker, get position lat and lng
+        
+            if(kentta.Tyyppi == '?'){
+             var icon = {
+              url: "https://www.oskarilehtonen.fi/extra/h7/red.png", // url
+              scaledSize: new google.maps.Size(50, 50), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(16, 32) // anchor
+            }
+          }
+            if(kentta.Tyyppi == 'Etu'){
+             var icon = {
+              url: "https://www.oskarilehtonen.fi/extra/h7/green.png", // url
+              scaledSize: new google.maps.Size(30, 40), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(16, 32) // anchor
+            }
+          }
+            if(kentta.Tyyppi == 'Kulta'){
+             var icon = {
+              url: "https://www.oskarilehtonen.fi/extra/h7/yellow.png", // url
+              scaledSize: new google.maps.Size(50, 50), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(16, 32) // anchor
+            }
+          }
+            if(kentta.Tyyppi == 'Kulta/Etu'){
+             var icon = {
+              url: "https://www.oskarilehtonen.fi/extra/h7/blue.png", // url
+              scaledSize: new google.maps.Size(50, 50), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(16, 32) // anchor
+            }
+            }
+			console.log(kentta.Tyyppi);
+            var latLng = new google.maps.LatLng(kentta.lat, kentta.lng);
+            var marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+		    icon: icon
+
+            /*
+                Tähän ohjelmakoodi, jossa markkeriin liitetään tapahtumakuuntelija klikkausta varten
+                sekä ohjelmoidaan toiminnot sitten popup-ikkunan informaation näyttämiselle JSON-
+                tiedostin tietojen perusteella.
+            */
+          }); marker.addListener('click', function() {
+               infowindow.open(map, marker);
+          });
+          var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">'+kentta.Kentta+'</h1>'+
+            '<div id="bodyContent">'+
+            '<p>'+kentta.Kuvaus+'</p>'+
+            '<ul>'+
+              '<li>Tyyppi: '+kentta.Tyyppi+'</li>'+
+              '<li>Osoite: '+kentta.Osoite+'</li>'+
+              '<li>Puhelin: '+kentta.Puhelin+'</li>'+
+              '<li>Email: '+kentta.Sahkoposti+'</li>'+
+              '<li>Web: <a target="_blank" href="'+kentta.Webbi+'">'+kentta.Webbi+'</a></li>'+
+            '</ul>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        }); // each
+    }); // ajax done
+  }
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDomu71EtlPuPiPcD9c648v18rdTjVrs6M&callback=initMap">
+</script>
+</body>
+</html>

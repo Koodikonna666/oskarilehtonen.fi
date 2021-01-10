@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>Taulukon läpikäyntiä</h1>
+
+        <p>for- ja for...of-silmukoilla</p>
+
+        <hr>
+
+        <p>Alkiot ovat: </p>
+
+        <div id="taulukko"></div>
+        <p>Lukumäärä: <span id="kpl"></span></p>
+        <p>Summa: <span id="sum"></span></p>
+        <p>Keskiarvo: <span id="ka"></span></p>
+
+
+        <img src="../../assets/img2/error.png">
+    </body>
+    <script>
+
+        let taulukko = [11, 22, 33, 44]
+        let sum = 0
+        for (let value of taulukko) {
+            sum += value
+        }
+        let ka = sum / taulukko.length
+        let nro = taulukko.length
+        var str = '<ul>'
+    taulukko.forEach(function(taulukko, index) {
+    str += '<li> taulukko['+ index + '] = ' + taulukko +'</li>';
+    }); 
+    str += '</ul>';
+    document.getElementById("taulukko").innerHTML = str;
+    document.getElementById("kpl").innerHTML = nro;
+    document.getElementById("sum").innerHTML = sum;
+    document.getElementById("ka").innerHTML = ka;
+
+
+    </script>
+</html>

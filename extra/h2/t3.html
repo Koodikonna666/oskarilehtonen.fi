@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>Taulukon läpikäyntiä</h1>
+
+        <p>Tulostamista ja keskeisten ja suureiden laskemista anonyymien avulla</p>
+
+        <hr>
+
+        <p id="sisalto"></p>
+        <div id="results"></div>
+
+    </body>
+    <script>
+    let taulukko = [11, 22, 33, 44]
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    let sum = 0
+    let nro = 0
+    let ka = 0
+    let pituus = taulukko.length
+    console.log(pituus);
+
+    let arraySum = (taulukko) => sum = taulukko.reduce(reducer);
+    arraySum(taulukko);
+
+    let arrayAvg = (taulukko) => ka = sum / pituus;
+    arrayAvg(taulukko);
+
+    let arrayCount = (taulukko) => nro = pituus;
+    arrayCount(taulukko);
+
+
+    let printArray = (taulukko) =>{
+        let str = ""
+        taulukko.forEach(function(taulukko, index) {
+            str +='<li> taulukko['+ index + '] = ' + taulukko +'</li>';
+            })
+        
+        let sisalto = `
+        Alkiot ovat =
+
+        <ul>
+            ${str}
+        </ul>
+        `     
+            document.getElementById("sisalto").innerHTML = sisalto;
+    }
+
+    arraySum(taulukko);
+    arrayCount(taulukko);
+    arrayAvg(taulukko);
+    printArray(taulukko)
+
+
+
+    let writeResults = (nro, sum, ka) => {
+        let res = `
+        <ul>
+            <li> Lukumäärä: ${nro} </li>
+            <li> Summa: ${sum} </li>
+            <li> Keskiarvo: ${ka} </li>
+        </ul>
+        `
+        document.getElementById("results").innerHTML = res;
+    }
+
+    window.onload = writeResults(nro, sum, ka);
+
+
+    </script>
+</html>

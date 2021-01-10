@@ -1,0 +1,32 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+</head>
+<body>
+<h1>Lukujen summa</h1>
+
+<form id="myForm">
+    <label>Luku 1:</label>
+    <input type="number" id="num1"><br>
+
+    <label>Luku 2:</label>
+    <input type="number" id="num2"><br>
+
+    <input type="submit" value="Laske">
+</form>
+
+<p></p>
+<script>
+  $("#myForm").submit(function(e){
+    e.preventDefault()
+    console.log("hello")
+    var num1 = parseInt($("#num1").val());
+    var num2 = parseInt($("#num2").val());
+    let result = "Vastaus on: "+ (num1 + num2);
+    $("p").html(result)
+  });
+</script>
+  
+</body>
+</html>

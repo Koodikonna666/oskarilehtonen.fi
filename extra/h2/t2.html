@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1>Taulukon läpikäyntiä</h1>
+
+        <p>Tulostamista ja keskeisten ja suureiden laskemista anonyymien avulla</p>
+
+        <hr>
+
+        <p>Alkiot ovat: </p>
+
+        <div id="taulukko"></div>
+        <div id="results"></div>
+        
+
+    </body>
+    <script>
+    let taulukko = [11, 22, 33, 44]
+    let str = ''
+    let sum = 0
+    let nro = 0
+    let ka = 0
+    
+    let arraySum = function(taulukko) {
+        for (let value of taulukko) {
+            sum += value
+        }
+	return sum;
+    }
+    let arrayAvg = function(taulukko){
+        ka = sum / taulukko.length;
+    return ka;
+    }
+
+    let arrayCount = function(taulukko){
+        nro = taulukko.length
+        return nro;
+    }
+
+    let printArray = function(taulukko){
+        str = '<ul>'
+        taulukko.forEach(function(taulukko, index) {
+            str += '<li> taulukko['+ index + '] = ' + taulukko +'</li>';
+            }); 
+            str += '</ul>';
+            console.log(str)
+            document.getElementById("taulukko").innerHTML = str;
+            return str;
+    }
+
+    function writeResults(nro, sum, ka) {
+        let res = '<ul>'
+            res += '<li> Lukumäärä: '+ nro +'</li>';
+            res += '<li> Summa: '+ sum +'</li>';
+            res += '<li> Keskiarvo: '+ ka +'</li>';
+        document.getElementById("results").innerHTML = res;
+            return res;
+    }
+
+    arraySum(taulukko);
+    arrayCount(taulukko);
+    arrayAvg(taulukko);
+    printArray(taulukko);
+    window.onload = writeResults(nro, sum, ka);
+
+
+    </script>
+</html>
