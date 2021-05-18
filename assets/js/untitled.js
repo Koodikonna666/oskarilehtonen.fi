@@ -5,6 +5,11 @@
         else $(".kilpailu").fadeOut();
         
     }
+      function testi(checked){
+        if(checked == true)
+            $(".testi").fadeIn();
+        else $(".testi").fadeOut();
+    }
     
     
     function blogi(checked){

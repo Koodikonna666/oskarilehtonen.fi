@@ -178,9 +178,11 @@ body, html {
   }
 }
 
-#main-blog {
-  padding-top: 60px;
-  padding-bottom: 50px;
+@media (max-width: 575px) {
+  #main-blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .main-timeline-info {
@@ -458,14 +460,39 @@ input[type=checkbox]:checked ~ .features-blue {
   list-style: none;
 }
 
-.col-md-6 {
-}
-
 .timeline-info {
   box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.75);
   border-radius: 10px;
   padding: 20px;
   flex: 1;
   margin: 20px;
+}
+
+.sanasto {
+  margin: auto;
+}
+
+@media (max-width: 765px) {
+  .race-date {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 765px) {
+  .date-blue, .date-red {
+    min-width: 35px;
+  }
+}
+
+@media (min-width: 575px) {
+  #race-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 574px) {
+  #race-desktop {
+    display: none;
+  }
 }
 

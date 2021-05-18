@@ -231,3 +231,9 @@
   margin: 10px;
 }
 
+@media (max-width: 992px) {
+  #sanasto {
+    flex-direction: column;
+  }
+}
+

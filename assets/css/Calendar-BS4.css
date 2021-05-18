@@ -1,0 +1,25 @@
+.row-striped:nth-of-type(odd) {
+  background-color: #efefef;
+  border-left: 10px rgb(20,130,185) solid;
+}
+
+.row-striped:nth-of-type(even) {
+  background-color: #ffffff;
+  border-left: 10px rgb(203,50,44) solid;
+}
+
+.row-striped {
+  padding: 15px 0;
+  margin-top: 15px;
+}
+
+.date-blue {
+  background-color: rgb(20,130,185);
+  min-width: 80px;
+}
+
+.date-red {
+  background-color: rgb(203,50,44);
+  min-width: 80px;
+}
+
