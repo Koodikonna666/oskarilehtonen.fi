@@ -19,9 +19,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/Bold-BS4-Animated-Back-To-Top.css">
+    <link rel="stylesheet" href="assets/css/Brands.css">
+    <link rel="stylesheet" href="assets/css/Calendar-BS4.css">
+    <link rel="stylesheet" href="assets/css/checkbox.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128881017-1"></script>
@@ -85,21 +95,24 @@
                 </div>
             </div>
             <div class="row" id="timeline-info-1">
-                <div class="col-md-6 col-xl-12 timeline-info">
+                <div class="col-md-6 col-xl-12 timeline-info" id="width">
                     <div>
                         <h2 class="text-center" style="padding: 10px;">Sanastoa</h2>
                     </div>
                     <div class="d-flex" id="sanasto">
                         <div class="text-left sanasto">
                             <ul class="list-unstyled">
+                                <li>w = tuulitulos</li>
+                                <li>PB = ennätys</li>
+                                <li>SB = kauden paras</li>
                                 <li>AP = askelpituus</li>
                                 <li>AT = askeltiheys</li>
-                                <li>KH =&nbsp;<a href="https://www.youtube.com/watch?v=rSaR_Aq38SQ&amp;ab_channel=HPSportsScience" target="_blank" style="text-decoration: underline;color: #0056b3;">kevennyshyppy</a></li>
-                                <li>SH =&nbsp;<a href="https://www.youtube.com/watch?v=lHPcnacJ_Ss&amp;ab_channel=CanadianSportInstituteCalgary" target="_blank" style="text-decoration: underline;color: #0056b3;">staattinen hyppy</a></li>
                             </ul>
                         </div>
                         <div class="sanasto">
                             <ul class="list-unstyled">
+                                <li>KH =&nbsp;<a href="https://www.youtube.com/watch?v=rSaR_Aq38SQ&amp;ab_channel=HPSportsScience" target="_blank" style="text-decoration: underline;color: #0056b3;">kevennyshyppy</a></li>
+                                <li>SH =&nbsp;<a href="https://www.youtube.com/watch?v=lHPcnacJ_Ss&amp;ab_channel=CanadianSportInstituteCalgary" target="_blank" style="text-decoration: underline;color: #0056b3;">staattinen hyppy</a></li>
                                 <li>elast% = elastiivisuus prosentti</li>
                                 <li>reakt.W = reaktiivisuus watteina</li>
                                 <li>ka hk = keskiarvo hyppykorkeus</li>
@@ -110,14 +123,224 @@
                 </div>
             </div>
         </div>
-    </div><!-- 26 modal used -->
-
-
-
-<div id="timeline">
+    </div><div id="timeline">
     <ul>
         
+<li class="kilpailu">
+            <div class ="bullet bullet-green"></div>
+            <div class ="date">14.7</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id67').style.display='block'"
+class="w3-button">Motonet GP Joensuu</a>
+                <p>100m: 10.41 <b>PB</b></p>
+                <p>100m: 10.53 <img class="medal" src="assets/img/bronze_medal.png"></p>
+            </div>
+        </li>
+               <div id="id67" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id67').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Joensuu</h4>
+      <p>Alkueräjuoksu tuntui hieman tukkoiselta, vähän samalta, kun kuortaneen alkueräjuoksu. Alkuerän jälkeen kuitenkin oikea lonkka alkoi kiristymään. Pystyin juoksemaan finaalin, mutta juoksu oli hieman varovaista, sekä samalla teknisesti vähän huonompi suoritus. Se näkyi ajassa.</p>
+        <h5 class="text-center">Alkuerän väliajat</h5>
+        <table id='results'>
+        <tr>
+            <th>60m</th>
+            <th>60-100m</th>
+            <th>100m</th>
+         </tr>
+         <tr>
+            <td>6,77</td>
+            <td style="text-align:center">3,64</td>
+            <td>10.41</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>
+        
+         <li class="kilpailu">
+            <div class ="bullet bullet-green"></div>
+            <div class ="date">29.6</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id66').style.display='block'"
+class="w3-button">Olympiaranking</a>
+                <p>200m: 20.86w </p>
+            </div>
+        </li>
+               <div id="id66" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id66').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Vaasa</h4>
+      <p>Kisa päästiin juoksemaan hyvään myötätuuleen. Aika oli hyvä, mutta ei vielkään sitä mitä odotin.</p>
+    </div>
+  </div>
+</div>
+        
+         <li class="kilpailu">
+            <div class ="bullet bullet-green"></div>
+            <div class ="date">20.6</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id65').style.display='block'"
+class="w3-button">Motonet GP Kuortane</a>
+                <p>100m ae: 10.47w </p>
+                <p>100m fin: 10.43 <b>PB</b> </p>
+            </div>
+        </li>
+               <div id="id65" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id65').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Motonet GP Kuortane</h4>
+      <p>Alkueräjuoksussa juoksu tuntui hieman nihkeältä. Tiesin, että pystyn parantamaan juoksua vielä finaaliin. Juoksu oli omalle tasolleni nähden hyvä ja tasapainoinen.</p>
+        <h5 class="text-center">Finaalin väliajat</h5>
+        <table id='results'>
+        <tr>
+            <th>0-40m</th>
+            <th>60m</th>
+            <th>60-100m</th>
+         </tr>
+         <tr>
+            <td>4,06</td>
+            <td>6,81</td>
+            <td>3,62</td>
+          </tr>
+        </table>
+    </div>
+  </div>
+</div>
+        
+          <li class="kilpailu">
+            <div class ="bullet bullet-yellow"></div>
+            <div class ="date">20.6</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id64').style.display='block'"
+class="w3-button">Euroopan joukkuemestaruuskisat</a>
+                <p>200m: 21.28 <img class="medal" src="assets/img/bronze_medal.png"></p>
+            </div>
+        </li>
+               <div id="id64" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id64').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Cluj-Napoca</h4>
+      <p>Ajattelin, että edellisen päivän "verryttely" viestijuoksusta voisi toimia hyvin 200m kisaan. Ehkä se toimikin, mutta tulos ei ollut kovin kummallinen. Sijoitus kuitenkin kolmas, joka on tärkeää näissä kisoissa.</p>
+    </div>
+  </div>
+</div>
          
+          <li class="kilpailu">
+            <div class ="bullet bullet-red"></div>
+            <div class ="date">19.6</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id63').style.display='block'"
+class="w3-button">Euroopan joukkuemestaruuskisat</a>
+                <p>4x100m: DNF</p>
+            </div>
+        </li>
+               <div id="id63" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id63').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Cluj-Napoca</h4>
+      <p>Vaihto meni pieleen.</p>
+    </div>
+  </div>
+</div>
+         
+        
+        <li class="kilpailu">
+            <div class ="bullet bullet-green"></div>
+            <div class ="date">12.6</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id61').style.display='block'"
+class="w3-button">Continental Tour Geneve</a>
+                <p>4x100m: 39.25 </p>
+                <p>200m: 20.97 </p>
+            </div>
+        </li>
+               <div id="id61" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id61').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Continental Tour Geneve</h4>
+      <p>Reissun päätarkoituksena oli juosta viestiä. Se onneksi kulki hyvin. Ei niin hyvillä vaihdoilla pystyimme juoksemaan noinkin hyvän ajan. Olimme tyytyväisiä. Oma 200m oli aika samanlainen veto kuin Jyväskylässä, ihan hyvä, mutta paljon jäi puuttumaan.</p>
+    </div>
+  </div>
+</div>
+         
+        <li class="kilpailu">
+            <div class ="bullet bullet-yellow"></div>
+            <div class ="date">8.6</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id62').style.display='block'"
+class="w3-button">Paavo Nurmi Games</a>
+                <p>100m ae: 10.66 </p>
+                <p>100m fin: 10.67 </p>
+            </div>
+        </li>
+               <div id="id62" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id62').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Paavo Nurmi Games</h4>
+      <p>Sateinen, vaikkakin suhteellisen lämmin keli verotti hieman tehoja ainakin omasta juoksusta. Myös edellinen 200m kisa jyväskylässä painoi ehkä vielä hieman jaloissa.</p>
+    </div>
+  </div>
+</div>
+         
+        
+ 
+        
+        <li class="kilpailu">
+            <div class ="bullet bullet-green"></div>
+            <div class ="date">2.6</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id60').style.display='block'"
+class="w3-button">Motonet GP Jyväskylä</a>
+                <p>200m: 20.97 </p>
+            </div>
+        </li>
+               <div id="id60" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id60').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Motonet GP Jyväskylä</h4>
+      <p>Kauden avauksessa juostu 100m ennätys herätteli paljonkin toiveita 200m avaukseen. Verryttelyssä juoksu tuntui hyvältä ja voimakkaalta, mutta heti kun pääsin kisatelineisiin ottamaan avausvetoja, jalat tuntuivat aivan veltoilta. Juoksusta puuttui voima, mutta silti 200m avauksessa alle 21 sekunnin on hyvä tulos.</p>
+    </div>
+  </div>
+</div>
+         
+        <li class="kilpailu">
+            <div class ="bullet bullet-green"></div>
+            <div class ="date">29.5</div>
+            <div class ="timeline_info">
+                <a onclick="document.getElementById('id59').style.display='block'"
+class="w3-button">Kultainen keihäs</a>
+                <p>100m ae: 10.49 </p>
+                <p>100m fin: 10.51 <b>PB</b><img class="medal" src="assets/img/bronze_medal.png"></p>
+            </div>
+        </li>
+               <div id="id59" class="w3-modal">
+  <div class="w3-modal-content w3-animate-bottom">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id59').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+        <h4>Kultainen keihäs</h4>
+      <p>Vaikka treenien puolesta vauhti oli näyttänyt hyvältä, on kesän ensimmäinen kilpailu aina kysymysmerkki. Onneksi kisaan sattui todella hyvät olosuhteet. Lämmin, sekä mukava myötätuuli. Alkuerän juoksu oli jo kaikkien aikojen nopein satasen juoksu, vaikka tuulta olikin hieman liikaa. Finaalissa hieman kevyempi myötäinen toi jo uuden ennätyksen. </p>
+    </div>
+  </div>
+</div>
+        
       <li class="kilpailu">
             <div class ="bullet bullet-yellow"></div>
             <div class ="date">20.2</div>
@@ -1784,9 +2007,12 @@ class="w3-button">Lonkkaleikkaus</a>
     </footer><a class="cd-top js-cd-top cd-top--fade-out cd-top--show" style="background-image:url(&quot;assets/img/cd-top-arrow.svg&quot;);" href="#0">Top</a>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/Bold-BS4-Animated-Back-To-Top.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/tilastot.js"></script>
+    <script src="assets/js/untitled.js"></script>
 </body>
 
 </html>

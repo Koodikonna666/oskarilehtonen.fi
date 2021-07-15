@@ -496,3 +496,7 @@ input[type=checkbox]:checked ~ .features-blue {
   }
 }
 
+#width {
+  max-width: 100%;
+}
+
