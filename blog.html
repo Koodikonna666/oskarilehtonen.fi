@@ -10,10 +10,6 @@
     <meta name="keywords" content="blogi, elämä, urheilija">
     <meta name="description" content="Pikajuoksijan mietteitä blogissa. Näe ja kuule ensimmäisten joukossa mitä harjoitus, sekä kilpailurintamalla tapahtuu.">
     <link rel="icon" type="image/png" sizes="520x520" href="assets/img/oskari_lehtonen_favicon_runner.png">
-    <link rel="icon" type="image/png" sizes="520x520" href="assets/img/oskari_lehtonen_favicon_runner.png">
-    <link rel="icon" type="image/png" sizes="520x520" href="assets/img/oskari_lehtonen_favicon_runner.png">
-    <link rel="icon" type="image/png" sizes="520x520" href="assets/img/oskari_lehtonen_favicon_runner.png">
-    <link rel="icon" type="image/png" sizes="520x520" href="assets/img/oskari_lehtonen_favicon_runner.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
@@ -35,8 +31,8 @@
 </head>
 
 <body style="font-family: Lora, serif;">
-    <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean">
-        <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="z-index: 1;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean" id="navbar">
+        <div class="container-fluid"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="z-index: 1;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Koti</a></li>
@@ -416,11 +412,18 @@
         <div class="brands-all"><a href="http://www.nurmijarvenyleisurheilu.fi/" target="_blank"><img class="main-sponsor" src="assets/img/nyu.png" alt="new balance"></a><a href="https://www.newbalance.com/" target="_blank"><img class="main-sponsor" src="assets/img/nb.png" alt="new balance"></a><a href="http://www.lumovaara.fi" target="_blank"> <img class="main-sponsor" src="assets/img/lumovaara.jpg" alt="lumovaara.fi"></a><a href="https://www.k-supermarket.fi/kaupat/lahde/" target="_blank"><img class="main-sponsor" src="assets/img/k-supermarket_lähde_logo.jpg" alt="k-supermarket lähde"></a><a href="https://www.nurmijarvi.fi/" target="_blank"><img class="main-sponsor" src="assets/img/nurmijärven_kunta_logo.png" alt="k-supermarket lähde"></a></div>
     </div>
     <footer id="footer">
-        <p class="text-center">Copyright © Oskari Lehtonen</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex"><a class="footer-links" href="privacy_policy.html">Privacy Policy</a></div>
+                <div class="col-md-6 d-flex" style="display: flex;"><a class="footer-links" href="cookie_policy.html">Cookie policy</a></div>
+            </div>
+        </div>
+        <p class="text-center footer-links">Copyright © Oskari Lehtonen</p>
     </footer><a class="cd-top js-cd-top cd-top--fade-out cd-top--show" style="background-image: url(&quot;assets/img/cd-top-arrow.svg&quot;);" href="#0">Top</a>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="assets/js/script.min.js"></script>
 </body>
